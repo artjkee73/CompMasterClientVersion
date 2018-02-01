@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_draw_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/menu_draw_profile" />
+    <item
+        android:id="@+id/menu_draw_price_list"
+        android:icon="@drawable/ic_price_list"
+        android:title="@string/menu_draw_price_list" />
+    <item
+        android:id="@+id/menu_draw_new_order"
+        android:icon="@drawable/ic_new_order"
+        android:title="@string/menu_draw_new_order" />
+    <item
+        android:id="@+id/menu_draw_order_list"
+        android:icon="@drawable/ic_orders_list"
+        android:title="@string/menu_draw_order_list" />
+    <item
+        android:id="@+id/menu_draw_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/menu_draw_logout" />
+
+</menu>

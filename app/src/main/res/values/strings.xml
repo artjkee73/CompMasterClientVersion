@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">CompMasterClientVersion</string>
+
+    <!--menu_draw-->
+    <string name="menu_draw_profile">Личный кабинет</string>
+    <string name="menu_draw_price_list">Прайслист</string>
+    <string name="menu_draw_order_list">Ваши заказы</string>
+    <string name="menu_draw_new_order">Создать заказ</string>
+    <string name="menu_draw_logout">Выйти</string>
+    <!--menu_draw_header-->
+    <string name="menu_draw_header_email">example_email@example.com</string>
+
+    <!--main_activity-->
+    <string name="toggle_open_main_a">open</string>
+    <string name="toggle_close_main_a">close</string>
+
+    <!--login_activity-->
+    <string name="tv_login_ok_login_a">Войти</string>
+    <string name="hint_login_login_a">почта</string>
+    <string name="hint_password_login_a">пароль</string>
+    <string name="tv_register_login_a">Зарегистрироваться</string>
+    <string name="error_not_contains_user_login_a">Логин/пароль введены некорректно,попробуйте еще раз</string>
+
+    <!--register_activity-->
+    <string name="tv_login_ok_register_a">Зарегистрироваться</string>
+    <string name="hint_login_register_a">почта</string>
+    <string name="hint_password_register_a">пароль</string>
+    <string name="hint_repeat_password_register_a">повторите пароль</string>
+    <string name="tv_login_register_a">войти</string>
+    <string name="error_validate_form_register_a">Некоректно заполнены поля!</string>
+    <string name="error_contains_user__register_a">Пользователь с таким email сущесвует</string>
+
+</resources>
