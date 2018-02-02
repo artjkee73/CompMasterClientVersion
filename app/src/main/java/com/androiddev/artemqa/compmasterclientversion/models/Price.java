@@ -6,16 +6,16 @@ import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
 
 public class Price extends RealmObject {
-    @PrimaryKey @Required private int id;
+    @PrimaryKey @Required private Integer id;
     @Required private String namePosition;
     @Required private String descriptionPosition;
-    @Required private int timeExecuting;
-    @Required private int costPosition;
+    @Required private Integer timeExecuting;
+    @Required private Integer costPosition;
     public Price(){
 
     }
 
-    public Price(int id,String namePosition,String descriptionPosition,int timeExecuting, int costPosition){
+    public Price(Integer id,String namePosition,String descriptionPosition,Integer timeExecuting, Integer costPosition){
         this.id = id;
         this.namePosition = namePosition;
         this.descriptionPosition = descriptionPosition;
@@ -27,7 +27,7 @@ public class Price extends RealmObject {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -47,18 +47,18 @@ public class Price extends RealmObject {
         this.descriptionPosition = descriptionPosition;
     }
 
-    public double getCostPosition() {
+    public Integer getCostPosition() {
         return costPosition;
     }
 
-    public void setCostPosition(int costPosition) {
+    public void setCostPosition(Integer costPosition) {
         this.costPosition = costPosition;
     }
-    public int getTimeExecuting() {
+    public Integer getTimeExecuting() {
         return timeExecuting;
     }
 
-    public void setTimeExecuting(int timeExecuting) {
+    public void setTimeExecuting(Integer timeExecuting) {
         this.timeExecuting = timeExecuting;
     }
 }

@@ -1,5 +1,5 @@
 
-package com.androiddev.artemqa.compmasterclientversion.ui;
+package com.androiddev.artemqa.compmasterclientversion.ui.activity;
 
 import android.content.Intent;
 import android.support.design.widget.TextInputEditText;

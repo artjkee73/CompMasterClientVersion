@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">CompMasterClientVersion</string>
+    <string name="label_price_list_activity">Прайслист</string>
+    <string name="label_new_order_activity">Новый заказ</string>
 
     <!--menu_draw-->
     <string name="menu_draw_profile">Личный кабинет</string>
@@ -7,6 +9,7 @@
     <string name="menu_draw_order_list">Ваши заказы</string>
     <string name="menu_draw_new_order">Создать заказ</string>
     <string name="menu_draw_logout">Выйти</string>
+
     <!--menu_draw_header-->
     <string name="menu_draw_header_email">example_email@example.com</string>
 
@@ -20,14 +23,39 @@
     <string name="hint_password_login_a">пароль</string>
     <string name="tv_register_login_a">Зарегистрироваться</string>
     <string name="error_not_contains_user_login_a">Логин/пароль введены некорректно,попробуйте еще раз</string>
+    <string name="ch_remember_me_user_login_a">Запомнить меня</string>
 
     <!--register_activity-->
     <string name="tv_login_ok_register_a">Зарегистрироваться</string>
     <string name="hint_login_register_a">почта</string>
     <string name="hint_password_register_a">пароль</string>
     <string name="hint_repeat_password_register_a">повторите пароль</string>
-    <string name="tv_login_register_a">войти</string>
+    <string name="tv_login_register_a">Войти</string>
     <string name="error_validate_form_register_a">Некоректно заполнены поля!</string>
     <string name="error_contains_user__register_a">Пользователь с таким email сущесвует</string>
+
+    <!--price_list_activity-->
+    <string name="tv_header_rv_price_l_a">Прайслист</string>
+
+    <!--rv_price_list_item-->
+    <string name="tv_name_item_rv_price_list">Название вида ремонта</string>
+    <string name="tv_hours_item_rv_price_list">24</string>
+    <string name="tv_price_item_rv_price_list">1000</string>
+
+    <!--new_order_activity-->
+    <string name="hint_name_new_order_a">Имя</string>
+    <string name="hint_phone_new_order_a">Номер телефона</string>
+    <string name="hint_description_new_order_a">Описание проблемы</string>
+    <string name="hint_address_new_order_a">Адрес</string>
+    <string name="tv_choose_position_a">Выбрать позиции</string>
+    <string name="tv_new_order_a">Добавить заказ</string>
+    <string name="cb_remember_data_new_order_a">Сохранить</string>
+    <string name="tv_total_sum_data_new_order_a">Стоимость заказа составила : %1$d руб.</string>
+
+    <!--rv_order_list_item-->
+    <string name="tv_number_item_rv_order_list">Номер заказа</string>
+    <string name="tv_cost_item_rv_order_list">Стоимость</string>
+    <string name="tv_date_item_rv_order_list">Дата</string>
+    <string name="tv_status_order_rv_order_list">Статус</string>
 
 </resources>

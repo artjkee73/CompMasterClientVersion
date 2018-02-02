@@ -8,4 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NoActionBar" parent="AppTheme"  >
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="ActionBar" parent="AppTheme">
+
+    </style>
+    <style name="ActionBar_Arrow" parent="AppTheme"  >
+        <!-- Customize your theme here. -->
+    </style>
+
 </resources>

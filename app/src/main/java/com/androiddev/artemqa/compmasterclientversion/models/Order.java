@@ -14,7 +14,7 @@ import io.realm.annotations.Required;
 public class Order extends RealmObject {
 
     @PrimaryKey
-    private int id;
+    private Integer id;
     @Required
     private String status;
     private Client client;
