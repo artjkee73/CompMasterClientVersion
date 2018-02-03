@@ -1,5 +1,7 @@
 package com.androiddev.artemqa.compmasterclientversion.ui.adapter;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,10 @@ import android.widget.TextView;
 
 import com.androiddev.artemqa.compmasterclientversion.R;
 import com.androiddev.artemqa.compmasterclientversion.models.Order;
+import com.androiddev.artemqa.compmasterclientversion.ui.activity.MainActivity;
+import com.androiddev.artemqa.compmasterclientversion.ui.activity.NewOrderActivity;
+import com.androiddev.artemqa.compmasterclientversion.ui.activity.OrderActivity;
+import com.androiddev.artemqa.compmasterclientversion.ui.activity.OrderListActivity;
 
 import java.text.SimpleDateFormat;
 
@@ -58,7 +64,11 @@ public class RvAdapterOrderList extends RecyclerView.Adapter<RvAdapterOrderList.
 
         @Override
         public void onClick(View view) {
-
+            Intent intent = new Intent(view.getContext(), OrderActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putInt(NewOrderActivity.EXTRA_ORDER_ID_NEW_ORDER_A,Integer.parseInt(tvNumber.getText().toString()));
+            intent.putExtras(bundle);
+            view.getContext().startActivity(intent);
         }
     }
 }

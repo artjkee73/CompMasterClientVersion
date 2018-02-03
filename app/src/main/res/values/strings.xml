@@ -51,11 +51,25 @@
     <string name="tv_new_order_a">Добавить заказ</string>
     <string name="cb_remember_data_new_order_a">Сохранить</string>
     <string name="tv_total_sum_data_new_order_a">Стоимость заказа составила : %1$d руб.</string>
+    <string name="error_validation_new_order_a">Поля заполнены некорректно</string>
+    <string name="error_fill_fields_new_order_a">Нужно заполнить все поля</string>
 
     <!--rv_order_list_item-->
     <string name="tv_number_item_rv_order_list">Номер заказа</string>
     <string name="tv_cost_item_rv_order_list">Стоимость</string>
     <string name="tv_date_item_rv_order_list">Дата</string>
     <string name="tv_status_order_rv_order_list">Статус</string>
+
+    <!--order_activity-->
+    <string name="tv_label_number_order_a">Номер заказа</string>
+    <string name="tv_label_type_order_a">Виды ремонта</string>
+    <string name="tv_label_employee_order_a">Работник</string>
+    <string name="tv_label_status_order_a">Статус</string>
+    <string name="tv_label_description_order_a">Описание</string>
+    <string name="tv_label_time_executing_order_a">Время выполн</string>
+    <string name="tv_label_time_creating_order_a">Время создан</string>
+    <string name="tv_label_date_creating_order_a">Дата создания</string>
+    <string name="tv_label_cost_order_a">Стоимость</string>
+    <string name="cv_delete_order_order_a">Отменить</string>
 
 </resources>

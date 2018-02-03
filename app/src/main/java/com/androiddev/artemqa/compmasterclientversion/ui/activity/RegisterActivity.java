@@ -57,6 +57,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     Bundle bundle = new Bundle();
                     bundle.putString(EXTRA_LOGIN_REGISTER_A,etLogin.getText().toString());
                     intent.putExtras(bundle);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
                 break;

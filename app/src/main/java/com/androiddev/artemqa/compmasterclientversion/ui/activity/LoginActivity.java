@@ -83,6 +83,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     Bundle bundle = new Bundle();
                     bundle.putString(EXTRA_LOGIN_LOGIN_A, etLogin.getText().toString());
                     intent.putExtras(bundle);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 } else {
                     Toast.makeText(this, R.string.error_not_contains_user_login_a, Toast.LENGTH_SHORT).show();

@@ -82,25 +82,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Intent intent;
         switch (item.getItemId()) {
             case R.id.menu_draw_profile:
-                Toast.makeText(this, "Нажата кнопка профиля", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_draw_price_list:
                 intent = new Intent(MainActivity.this, PriceListActivity.class);
                 startActivity(intent);
-                Toast.makeText(this, "Нажата кнопка прайслиста", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_draw_new_order:
                 intent = new Intent(MainActivity.this, NewOrderActivity.class);
                 startActivity(intent);
-                Toast.makeText(this, "Нажата кнопка создания заказа", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_draw_order_list:
                 intent = new Intent(MainActivity.this, OrderListActivity.class);
                 startActivity(intent);
-                Toast.makeText(this, "Нажата кнопка списка заказов", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_draw_logout:
-                Toast.makeText(this, "Нажата кнопка выхода", Toast.LENGTH_SHORT).show();
+                intent = new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(intent);
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);

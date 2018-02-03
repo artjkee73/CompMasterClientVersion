@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_gradient_new_order_a"
+        tools:context="com.androiddev.artemqa.compmasterclientversion.ui.activity.OrderActivity">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_delete_order_order_a"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/blue"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/cv_delete_order_order_a"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <ImageView
+            android:id="@+id/iv_number_order_order_a"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="76dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_order" />
+
+        <TextView
+            android:id="@+id/tv_label_number_order_a"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="76dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/tv_label_number_order_a"
+            app:layout_constraintStart_toEndOf="@+id/iv_number_order_order_a"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_number_order_a"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="76dp"
+            android:gravity="start|center_vertical"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_number_order_a"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_cost_order_a"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_number_order_order_a"
+            app:srcCompat="@drawable/ic_ruble" />
+
+        <TextView
+            android:id="@+id/tv_label_cost_order_a"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/tv_label_cost_order_a"
+            app:layout_constraintStart_toEndOf="@+id/iv_cost_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_number_order_a" />
+
+        <TextView
+            android:id="@+id/tv_cost_order_a"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_cost_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_number_order_a" />
+
+        <ImageView
+            android:id="@+id/iv_status_order_a"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cost_order_a"
+            app:srcCompat="@drawable/ic_about" />
+
+        <TextView
+            android:id="@+id/tv_label_status_order_a"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/tv_label_status_order_a"
+            app:layout_constraintStart_toEndOf="@+id/iv_status_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_cost_order_a" />
+
+        <TextView
+            android:id="@+id/tv_status_order_a"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_status_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cost_order_a" />
+
+        <ImageView
+            android:id="@+id/iv_employee_order_a"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_status_order_a"
+            app:srcCompat="@drawable/ic_employee" />
+
+        <TextView
+            android:id="@+id/tv_label_employee_order_a"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/tv_label_employee_order_a"
+            app:layout_constraintStart_toEndOf="@+id/iv_employee_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_status_order_a" />
+
+        <TextView
+            android:id="@+id/tv_employee_order_a"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_employee_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status_order_a" />
+
+        <ImageView
+            android:id="@+id/iv_date_creating_order_a"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_employee_order_a"
+            app:srcCompat="@drawable/ic_date" />
+
+        <TextView
+            android:id="@+id/tv_label_date_creating_order_a"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/tv_label_date_creating_order_a"
+            app:layout_constraintStart_toEndOf="@+id/iv_date_creating_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_employee_order_a" />
+
+        <TextView
+            android:id="@+id/tv_date_creating_order_a"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_date_creating_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_employee_order_a" />
+
+        <ImageView
+            android:id="@+id/iv_time_creating_order_a"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_date_creating_order_a"
+            app:srcCompat="@drawable/ic_time" />
+
+        <TextView
+            android:id="@+id/tv_label_time_creating_order_a"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/tv_label_time_creating_order_a"
+            app:layout_constraintStart_toEndOf="@+id/iv_time_creating_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_date_creating_order_a" />
+
+        <TextView
+            android:id="@+id/tv_time_creating_order_a"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_time_creating_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date_creating_order_a" />
+
+        <ImageView
+            android:id="@+id/iv_time_executing_order_a"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_time_creating_order_a"
+            app:srcCompat="@drawable/ic_time_executing" />
+
+        <TextView
+            android:id="@+id/tv_label_time_executing_order_a"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/tv_label_time_executing_order_a"
+            app:layout_constraintStart_toEndOf="@+id/iv_time_executing_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_time_creating_order_a" />
+
+        <TextView
+            android:id="@+id/tv_time_executing_order_a"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_time_executing_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_time_creating_order_a" />
+
+        <ImageView
+            android:id="@+id/iv_label_type_order_a"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_time_executing_order_a"
+            app:srcCompat="@drawable/ic_orders_list" />
+
+        <TextView
+            android:id="@+id/tv_label_type_order_a"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/tv_label_type_order_a"
+            app:layout_constraintStart_toEndOf="@+id/iv_label_type_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_time_executing_order_a" />
+
+        <TextView
+            android:id="@+id/tv_type_order_a"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="TextView \nTextView \nTextView"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_type_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_time_executing_order_a" />
+
+        <ImageView
+            android:id="@+id/iv_description_order_a"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_type_order_a"
+            app:srcCompat="@drawable/ic_comment" />
+
+        <TextView
+            android:id="@+id/tv_label_description_order_a"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/tv_label_description_order_a"
+            app:layout_constraintStart_toEndOf="@+id/iv_description_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_type_order_a" />
+
+        <TextView
+            android:id="@+id/tv_description_order_a"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:text="TextView \nTextView \nTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_description_order_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_type_order_a" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
