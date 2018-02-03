@@ -16,6 +16,7 @@ import com.androiddev.artemqa.compmasterclientversion.ui.activity.OrderActivity;
 import com.androiddev.artemqa.compmasterclientversion.ui.activity.OrderListActivity;
 
 import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -41,7 +42,7 @@ public class RvAdapterOrderList extends RecyclerView.Adapter<RvAdapterOrderList.
     public void onBindViewHolder(RvAdapterOrderList.PriceViewHolder holder, int position) {
         holder.tvNumber.setText(String.valueOf(orders.get(position).getId()));
         holder.tvCost.setText(String.valueOf(orders.get(position).getPriceListPosition().sum("costPosition")));
-        holder.tvDate.setText(String.valueOf( new SimpleDateFormat("yyyy-MM-dd").format(orders.get(position).getDateOrder())));
+        holder.tvDate.setText(String.valueOf( new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(orders.get(position).getDateOrder())));
         holder.tvStatus.setText(orders.get(position).getStatus());
     }
 

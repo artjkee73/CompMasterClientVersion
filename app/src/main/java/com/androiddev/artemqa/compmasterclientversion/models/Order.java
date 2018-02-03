@@ -1,5 +1,7 @@
 package com.androiddev.artemqa.compmasterclientversion.models;
 
+import android.content.Intent;
+
 import java.util.Date;
 
 import io.realm.RealmList;
@@ -32,11 +34,11 @@ public class Order extends RealmObject {
         this.dateOrder = dateOrder;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

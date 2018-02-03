@@ -63,7 +63,13 @@ public class App extends Application {
                 Log.d(TAG,"SyncUser NOT OK");
             }
         };
-        SyncCredentials syncCredentials = SyncCredentials.usernamePassword(userName, password, false);
+        SyncCredentials syncCredentials;
+        if(SyncUser.currentUser()==null){
+            syncCredentials = SyncCredentials.usernamePassword(userName, password, true);
+        } else {
+            syncCredentials = SyncCredentials.usernamePassword(userName, password, false);
+        }
+
         SyncUser.loginAsync(syncCredentials,Helper.REALM_AUTH, callback);
     }
     private SyncConfiguration getSyncConfiguration(SyncUser syncUser, String realmURL) {
@@ -82,8 +88,8 @@ public class App extends Application {
                 localRealm.beginTransaction();
                 localRealm.copyToRealmOrUpdate(realm.where(Price.class).findAll());
                 localRealm.copyToRealmOrUpdate(realm.where(Order.class).findAll());
-                localRealm.copyToRealm(realm.where(Client.class).findAll());
-                localRealm.copyToRealm(realm.where(Employee.class).findAll());
+                localRealm.copyToRealmOrUpdate(realm.where(Client.class).findAll());
+                localRealm.copyToRealmOrUpdate(realm.where(Employee.class).findAll());
                 localRealm.commitTransaction();
                 localRealm.close();
                 realm.close();

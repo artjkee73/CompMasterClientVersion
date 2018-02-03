@@ -1,6 +1,7 @@
 package com.androiddev.artemqa.compmasterclientversion.models;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
 
 /**
@@ -8,7 +9,7 @@ import io.realm.annotations.Required;
  */
 
 public class Employee extends RealmObject {
-    @Required
+    @Required @PrimaryKey
     private String login;
     @Required
     private String password;

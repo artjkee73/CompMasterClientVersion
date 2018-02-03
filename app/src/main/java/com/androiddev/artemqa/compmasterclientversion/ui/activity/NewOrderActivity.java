@@ -145,6 +145,7 @@ public class NewOrderActivity extends AppCompatActivity implements View.OnClickL
                                 currentClient.setAddress(etAddress.getText().toString());
                                 currentClient.setName(etName.getText().toString());
                                 currentClient.setPhoneNumber(etPhone.getText().toString());
+                                realm.copyToRealmOrUpdate(currentClient);
                             }
                         });
                     }

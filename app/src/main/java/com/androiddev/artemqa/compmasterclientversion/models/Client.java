@@ -2,13 +2,13 @@ package com.androiddev.artemqa.compmasterclientversion.models;
 
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
 
 public class Client extends RealmObject {
-    @Required
-    private String login;
-    @Required
-    private String password;
+
+    @Required @PrimaryKey private String login;
+    @Required private String password;
     private String name;
     private String address;
     private String phoneNumber;

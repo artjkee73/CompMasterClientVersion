@@ -50,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         @Override
                         public void execute(Realm realm) {
                             Client client = new Client(etLogin.getText().toString(), etPassword.getText().toString());
-                            realm.copyToRealm(client);
+                            realm.copyToRealmOrUpdate(client);
                         }
                     });
                     intent = new Intent(RegisterActivity.this, MainActivity.class);
