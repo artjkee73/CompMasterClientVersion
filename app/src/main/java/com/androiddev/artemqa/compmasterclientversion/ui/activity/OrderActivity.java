@@ -51,13 +51,14 @@ public class OrderActivity extends AppCompatActivity {
         cvDeleteOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int deletedOrderId = currentOrder.getId();
                 realm.executeTransaction(new Realm.Transaction() {
                     @Override
                     public void execute(Realm realm) {
                         realm.where(Order.class).equalTo("id",currentOrder.getId()).findFirst().deleteFromRealm();
                     }
                 });
-                Toast.makeText(OrderActivity.this,"Заказ № "+ currentOrder.getId()+ " успешно отменён",Toast.LENGTH_SHORT).show();
+                Toast.makeText(OrderActivity.this,"Заказ № "+ deletedOrderId + " успешно отменён",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(OrderActivity.this,OrderListActivity.class);
                 startActivity(intent);
             }

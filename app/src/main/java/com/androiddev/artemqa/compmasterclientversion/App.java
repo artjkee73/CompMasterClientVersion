@@ -64,11 +64,9 @@ public class App extends Application {
             }
         };
         SyncCredentials syncCredentials;
-        if(SyncUser.currentUser()==null){
-            syncCredentials = SyncCredentials.usernamePassword(userName, password, true);
-        } else {
+
             syncCredentials = SyncCredentials.usernamePassword(userName, password, false);
-        }
+
 
         SyncUser.loginAsync(syncCredentials,Helper.REALM_AUTH, callback);
     }

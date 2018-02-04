@@ -1,6 +1,7 @@
 package com.androiddev.artemqa.compmasterclientversion.ui.activity;
 
 import android.content.Intent;
+import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +20,7 @@ import com.androiddev.artemqa.compmasterclientversion.models.Client;
 import io.realm.Realm;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    public static final String EXTRA_LOGIN_MAIN_A = "com.androiddev.artemqa.compmasterclientversion.ui.mainactivity.LOGIN_EXTRA";
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
@@ -58,13 +60,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private String getLoginFromIntent() {
         Bundle bundle = getIntent().getExtras();
-        String login;
+        String login ;
         if (bundle.getString(LoginActivity.EXTRA_LOGIN_LOGIN_A) != null) {
             login = bundle.getString(LoginActivity.EXTRA_LOGIN_LOGIN_A);
-        } else {
+        } else if(bundle.getString(RegisterActivity.EXTRA_LOGIN_REGISTER_A) != null) {
             login = bundle.getString(RegisterActivity.EXTRA_LOGIN_REGISTER_A);
+        } else {
+            login = bundle.getString(EXTRA_LOGIN_MAIN_A);
         }
-
         return login;
     }
 
@@ -75,6 +78,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        outState.putString(EXTRA_LOGIN_MAIN_A,currentClient.getLogin());
+        super.onSaveInstanceState(outState, outPersistentState);
     }
 
     @Override
