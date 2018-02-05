@@ -166,8 +166,8 @@ public class NewOrderActivity extends AppCompatActivity implements View.OnClickL
                 && etAddress.getText().toString().equals("")
                 && etName.getText().toString().equals(""))) {
 
-            if ((etName.getText().toString().matches("^\\w{2,35}$")
-                    && (etAddress.getText().toString().matches("^\\w{5,49}$"))
+            if ((etName.getText().toString().matches("^[\\w\\s]{2,35}$")
+                    && (etAddress.getText().toString().matches("^[\\w\\s\\.\\,]{5,49}$"))
                     && (etPhone.getText().toString().matches("^\\+?[0-9]{5,16}$")))) {
                 return true;
 

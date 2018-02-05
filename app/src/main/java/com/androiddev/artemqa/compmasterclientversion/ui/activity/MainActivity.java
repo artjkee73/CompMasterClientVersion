@@ -1,6 +1,8 @@
 package com.androiddev.artemqa.compmasterclientversion.ui.activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
@@ -23,6 +25,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.mikhaellopez.circularimageview.CircularImageView;
 
 
 import io.realm.Realm;
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
-    private TextView tvUrl,tvHoursWork,tvEmail,tvPhone,tvSite,tvVk;
+    private TextView tvUrl,tvEmail,tvPhone,tvVk;
     Realm realm;
     public static Client currentClient;
     private String loginClient;
@@ -75,6 +78,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         View headerView = navigationView.getHeaderView(0);
         TextView clientEmail = headerView.findViewById(R.id.tv_login_user_nav_header);
         clientEmail.setText(currentClient.getLogin());
+        CircularImageView clientPhoto =  headerView.findViewById(R.id.iv_user_photo_nav_header);
+        if (currentClient.getPhoto() != null) {
+            byte[] byreArrayPhoto = currentClient.getPhoto();
+            Bitmap bmp = BitmapFactory.decodeByteArray(byreArrayPhoto, 0, byreArrayPhoto.length);
+            clientPhoto.setImageBitmap(Bitmap.createScaledBitmap(bmp, 200,
+                    200, false));
+        }
     }
 
     private Client setCurrentClient() {
