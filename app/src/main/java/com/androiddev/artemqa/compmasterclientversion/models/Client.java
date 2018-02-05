@@ -12,6 +12,7 @@ public class Client extends RealmObject {
     private String name;
     private String address;
     private String phoneNumber;
+    private byte[] photo;
 
     public Client() {
 
@@ -61,6 +62,13 @@ public class Client extends RealmObject {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+    public byte[] getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(byte[] photo) {
+        this.photo = photo;
     }
 
 }

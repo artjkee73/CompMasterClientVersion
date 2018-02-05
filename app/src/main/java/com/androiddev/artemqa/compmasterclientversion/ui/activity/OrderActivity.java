@@ -81,8 +81,8 @@ public class OrderActivity extends AppCompatActivity {
         } else {
             tvEmployee.setText("не назначен");
         }
-        tvCost.setText(String.valueOf(currentOrder.getPriceListPosition().sum("costPosition")));
-        tvTimeExecuting.setText(String.valueOf(currentOrder.getPriceListPosition().sum("timeExecuting")));
+        tvCost.setText(String.valueOf(currentOrder.getPriceListPosition().sum("costPosition")).concat(" руб."));
+        tvTimeExecuting.setText(String.valueOf(currentOrder.getPriceListPosition().sum("timeExecuting")).concat( "ч."));
         Date fullDateCreatingOrder = currentOrder.getDateOrder();
         tvDateCreate.setText(String.valueOf(new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(fullDateCreatingOrder)));
         tvTimeCreate.setText(String.valueOf(new SimpleDateFormat("HH:mm", Locale.getDefault()).format(fullDateCreatingOrder)));
@@ -104,6 +104,12 @@ public class OrderActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(OrderActivity.this,OrderListActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onDestroy() {

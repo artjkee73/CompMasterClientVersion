@@ -89,10 +89,17 @@ public class NewOrderActivity extends AppCompatActivity implements View.OnClickL
                     for (int i = 0; i < priceListIsChecked.size(); i++) {
                         totalSum += priceListIsChecked.get(i).getCostPosition();
                     }
+                    String typeRepairs = "";
+                    for (int i = 0; i < positionIsChecked.size(); i++) {
+                        typeRepairs += positionIsChecked.get(i);
+                        if (i<positionIsChecked.size()-1) {
+                            typeRepairs+=",";
+                        }
+                    }
                     cvNewOrder.setVisibility(View.VISIBLE);
                     cvChoosePosition.setVisibility(View.GONE);
                     tvTotalSum.setVisibility(View.VISIBLE);
-                    tvTotalSum.setText(getResources().getString(R.string.tv_total_sum_data_new_order_a, totalSum));
+                    tvTotalSum.setText(getResources().getString(R.string.tv_total_sum_data_new_order_a, totalSum, typeRepairs));
                 }
             }
         }

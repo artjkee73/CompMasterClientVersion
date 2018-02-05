@@ -1,5 +1,6 @@
 package com.androiddev.artemqa.compmasterclientversion.ui.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -33,5 +34,18 @@ public class OrderListActivity extends AppCompatActivity {
 
     private RealmResults<Order> getAdapterData() {
         return realm.where(Order.class).equalTo("client.name", MainActivity.currentClient.getName()).sort("dateOrder", Sort.ASCENDING).findAll();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(OrderListActivity.this,MainActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        realm.close();
     }
 }

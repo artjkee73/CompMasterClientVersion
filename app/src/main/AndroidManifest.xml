@@ -36,18 +36,26 @@
             android:theme="@style/NoActionBar" />
         <activity
             android:name=".ui.activity.NewOrderActivity"
-            android:label="@string/label_new_order_activity"
             android:screenOrientation="portrait"
-            android:theme="@style/ActionBar"
+            android:theme="@style/NoActionBar"
             android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name=".ui.activity.OrderListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
-        <activity android:name=".ui.activity.OrderActivity"
-            android:theme="@style/NoActionBar"
+        <activity
+            android:name=".ui.activity.OrderActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustNothing"/>
+            android:theme="@style/NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCOHQs-neG_bzWSPOEoLSpuomxe9GQU05A" />
+
+        <activity android:name=".ui.activity.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"/>
     </application>
 
 </manifest>

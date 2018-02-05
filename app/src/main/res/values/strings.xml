@@ -6,7 +6,7 @@
     <!--menu_draw-->
     <string name="menu_draw_profile">Личный кабинет</string>
     <string name="menu_draw_price_list">Прайслист</string>
-    <string name="menu_draw_order_list">Ваши заказы</string>
+    <string name="menu_draw_order_list">Мои заказы</string>
     <string name="menu_draw_new_order">Создать заказ</string>
     <string name="menu_draw_logout">Выйти</string>
 
@@ -16,6 +16,13 @@
     <!--main_activity-->
     <string name="toggle_open_main_a">open</string>
     <string name="toggle_close_main_a">close</string>
+    <string name="tv_url_main_a">http://compmaster24.ru</string>
+    <string name="tv_hours_work_main_a">8:00 – 24:00</string>
+    <string name="tv_email_main_a">zabbarovdamir@mail.ru</string>
+    <string name="tv_vk_main_a">vk.com/compmacter</string>
+    <string name="tv_phone_main_a">24–65–74 , 75–76–03</string>
+    <string name="tv_location_main_a">Ульяновск, Гагарина,28</string>
+    <string name="tv_our_contact_main_a">Наши контакты</string>
 
     <!--login_activity-->
     <string name="tv_login_ok_login_a">Войти</string>
@@ -36,6 +43,8 @@
 
     <!--price_list_activity-->
     <string name="tv_header_rv_price_l_a">Прайслист</string>
+    <!--order_list_activity-->
+    <string name="tv_header_rv_order_l_a">Мои заказы</string>
 
     <!--rv_price_list_item-->
     <string name="tv_name_item_rv_price_list">Название вида ремонта</string>
@@ -50,7 +59,8 @@
     <string name="tv_choose_position_a">Выбрать позиции</string>
     <string name="tv_new_order_a">Добавить заказ</string>
     <string name="cb_remember_data_new_order_a">Сохранить</string>
-    <string name="tv_total_sum_data_new_order_a">Стоимость заказа составила : %1$d руб.</string>
+    <string name="tv_total_sum_data_new_order_a">Стоимость заказа составила : %1$d руб.\n
+                                                    Выбраны виды ремонта : %2$s </string>
     <string name="error_validation_new_order_a">Поля заполнены некорректно</string>
     <string name="error_fill_fields_new_order_a">Нужно заполнить все поля</string>
 
@@ -72,4 +82,10 @@
     <string name="tv_label_cost_order_a">Стоимость</string>
     <string name="cv_delete_order_order_a">Отменить</string>
 
+    <!--profile_activity-->
+    <string name="tv_name_profile_a">Ваше имя</string>
+    <string name="tv_phobe_profile_a">Ваш номер</string>
+    <string name="tv_email_profile_a">Ваш еmail</string>
+    <string name="tv_address_profile_a">Ваш адрес</string>
+    <string name="cv_save_profile_a">Сохранить</string>
 </resources>

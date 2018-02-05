@@ -53,8 +53,6 @@ public class PriceListActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent intent = new Intent();
-        Bundle bundle = new Bundle();
-        bundle.putStringArrayList(NewOrderActivity.EXTRA_FLAG_VISIBLE_CHECKED, positionIsChecked);
         intent.putExtra(NewOrderActivity.EXTRA_FLAG_VISIBLE_CHECKED, positionIsChecked);
         setResult(RESULT_OK, intent);
         finish();
