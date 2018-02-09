@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CompMasterClientVersion</string>
+    <string name="app_name">Компьютерная помощь</string>
     <string name="label_price_list_activity">Прайслист</string>
     <string name="label_new_order_activity">Новый заказ</string>
 

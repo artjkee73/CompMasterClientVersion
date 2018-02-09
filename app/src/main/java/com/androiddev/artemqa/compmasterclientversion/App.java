@@ -8,19 +8,13 @@ import com.androiddev.artemqa.compmasterclientversion.models.Employee;
 import com.androiddev.artemqa.compmasterclientversion.models.Order;
 import com.androiddev.artemqa.compmasterclientversion.models.Price;
 import com.androiddev.artemqa.compmasterclientversion.util.Helper;
-
-import java.util.ArrayList;
-
 import io.realm.ObjectServerError;
 import io.realm.Realm;
-import io.realm.RealmResults;
 import io.realm.SyncConfiguration;
 import io.realm.SyncCredentials;
 import io.realm.SyncUser;
 
-/**
- * Created by artemqa on 30.01.2018.
- */
+
 
 public class App extends Application {
     Realm realm;
@@ -31,23 +25,9 @@ public class App extends Application {
         super.onCreate();
         Realm.init(this);
         realm = Realm.getDefaultInstance();
-//        setPrice();
         loginToRealm(Helper.REALM_LOGIN , Helper.REALM_PASS);
     }
 
-    private void setPrice() {
-        RealmResults<Price> priceList = realm.where(Price.class).findAll();
-        if (priceList.size() == 0) {
-            final ArrayList<Price> prices = Helper.addPriceList();
-            realm.executeTransaction(new Realm.Transaction() {
-                @Override
-                public void execute(Realm realm) {
-                    realm.insertOrUpdate(prices);
-                }
-            });
-        }
-        realm.close();
-    }
 
     private void loginToRealm(final String userName, String password) {
         SyncUser.Callback<SyncUser> callback = new SyncUser.Callback<SyncUser>() {
